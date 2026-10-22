@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#080808">
-<meta name="description" content="Btech Apple Specialist. Consulte nossos produtos e condições.">
-<title>Btech | Apple Specialist</title>
+<meta name="description" content="Betech Apple Specialist. Consulte nossos produtos e condições.">
+<title>Betech | Apple Specialist</title>
 <style>
 :root{--bg:#080808;--panel:#151515;--line:#303030;--text:#fff;--muted:#aaa}
 *{box-sizing:border-box}
@@ -60,7 +60,7 @@ footer{border-top:1px solid var(--line);padding:24px 0;color:#999;font-size:12px
 <body>
 <header>
 <nav class="wrap">
-<a class="logo" href="#">B<span>tech.</span></a>
+<a class="logo" href="#">B<span>etech.</span></a>
 <span class="eyebrow">Apple Specialist</span>
 <a href="#produtos">Ver produtos</a>
 </nav>
@@ -69,7 +69,7 @@ footer{border-top:1px solid var(--line);padding:24px 0;color:#999;font-size:12px
 <main>
 <section class="hero">
 <div class="wrap">
-<div class="eyebrow">Tecnologia • Experiência • Btech</div>
+<div class="eyebrow">Tecnologia • Experiência • Betech</div>
 <h1>Seu próximo iPhone começa aqui.</h1>
 <p>Descubra sua próxima experiência Apple. Consulte nossos aparelhos, condições de pagamento e possibilidades de upgrade.</p>
 <a class="white" style="display:inline-block;padding:13px 23px;border-radius:30px;font-weight:700" href="#produtos">Explorar vitrine</a>
@@ -92,7 +92,7 @@ footer{border-top:1px solid var(--line);padding:24px 0;color:#999;font-size:12px
 <section class="wrap contact" id="contato">
 <h2>Vamos encontrar seu próximo iPhone?</h2>
 <p>Fale com nossa equipe para consultar os aparelhos disponíveis.</p>
-<button class="white" id="contact">Falar com a Btech</button>
+<button class="white" id="contact">Falar com a Betech</button>
 </section>
 
 <section class="admin" id="admin">
@@ -114,16 +114,16 @@ footer{border-top:1px solid var(--line);padding:24px 0;color:#999;font-size:12px
 
 <footer>
 <div class="wrap">
-<strong>Btech | Apple Specialist</strong>
+<strong>Betech | Apple Specialist</strong>
 <p>Consulte disponibilidade, valores e condições com nossa equipe.</p>
 <p>Apple é uma marca de seu respectivo titular. Este site não representa necessariamente um canal oficial da Apple.</p>
-<p>© <span id="year"></span> Btech. Todos os direitos reservados.</p>
+<p>© <span id="year"></span> Betech. Todos os direitos reservados.</p>
 </div>
 </footer>
 
 <script>
 const WHATSAPP = "554132031234";
-const STORAGE_KEY = "btech_demo_products";
+const STORAGE_KEY = "betech_demo_products";
 let products = [];
 
 try {
@@ -168,7 +168,7 @@ function render() {
       products.length ? "Nenhum produto encontrado" : "Novidades em breve"
     }</strong><span>${
       products.length ? "Tente outra busca." :
-      "Nossa vitrine está sendo preparada. Fale com a Btech para consultar os aparelhos disponíveis."
+      "Nossa vitrine está sendo preparada. Fale com a Betech para consultar os aparelhos disponíveis."
     }</span></div>`;
     return;
   }
@@ -180,7 +180,7 @@ function render() {
         <h3>${escapeHTML(p.name)}</h3>
         <p>${escapeHTML(p.description || "Consulte detalhes com nossa equipe.")}</p>
         <div class="price">${p.price !== "" && p.price != null ? money(p.price) : "Consulte o valor"}</div>
-        <a class="white" style="padding:11px;border-radius:30px;font-size:13px;font-weight:700" target="_blank" rel="noopener" href="${"https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent("Olá, Btech! Tenho interesse no produto " + p.name + ".")}">Consultar no WhatsApp</a>
+        <a class="white" style="padding:11px;border-radius:30px;font-size:13px;font-weight:700" target="_blank" rel="noopener" href="${"https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent("Olá, Betech! Tenho interesse no produto " + p.name + ".")}">Consultar no WhatsApp</a>
       </div>
     </article>`).join("");
 }
@@ -258,7 +258,7 @@ document.getElementById("adminList").addEventListener("click", event => {
 
 search.addEventListener("input", render);
 document.getElementById("contact").addEventListener("click", () => {
-  whatsapp("Olá, Btech! Gostaria de conhecer os produtos disponíveis.");
+  whatsapp("Olá, Betech! Gostaria de conhecer os produtos disponíveis.");
 });
 
 render();
