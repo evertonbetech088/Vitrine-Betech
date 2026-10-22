@@ -1,1 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080808">
+<meta name="description" content="Btech Apple Specialist. Consulte nossos produtos e condições.">
+<title>Btech | Apple Specialist</title>
+<style>
+:root{--bg:#080808;--panel:#151515;--line:#303030;--text:#fff;--muted:#aaa}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.5}
+a{color:inherit;text-decoration:none}
+button,input,textarea{font:inherit}
+button{cursor:pointer;border:0;border-radius:30px;padding:12px 18px;font-weight:700}
+.wrap{width:min(1100px,90%);margin:auto}
+header{position:sticky;top:0;z-index:5;background:#0b0b0bf2;border-bottom:1px solid var(--line)}
+nav{min-height:68px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.logo{font-size:27px;font-weight:900;letter-spacing:-1.5px}
+.logo span{color:#aaa}
+nav a:last-child{border:1px solid #444;padding:8px 14px;border-radius:30px;font-size:13px}
+.hero{text-align:center;padding:75px 0 65px;background:radial-gradient(ellipse at top,#292929,transparent 70%)}
+.eyebrow{text-transform:uppercase;font-size:11px;letter-spacing:3px;color:#bbb}
+h1{font-size:clamp(40px,8vw,75px);line-height:1.05;letter-spacing:-3px;margin:18px 0}
+.hero p{max-width:550px;margin:0 auto 25px;color:var(--muted)}
+.white{background:#fff;color:#080808}
+.dark{background:#222;color:#fff;border:1px solid #444}
+.section{padding:38px 0 65px}
+.heading{display:flex;justify-content:space-between;align-items:end;gap:16px;margin-bottom:22px}
+h2{font-size:clamp(26px,5vw,38px);margin:0;letter-spacing:-1px}
+.muted{color:var(--muted)}
+input,textarea{background:#101010;color:#fff;border:1px solid #444;border-radius:10px;padding:12px}
+.search{width:100%;margin-bottom:22px;border-radius:30px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.product{background:var(--panel);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.product img{width:100%;height:210px;object-fit:contain;background:#202020}
+.product-info{padding:16px}
+.product h3{margin:0 0 5px}
+.product p{font-size:13px;color:var(--muted)}
+.price{font-size:20px;font-weight:800;margin:12px 0}
+.product a{display:block;text-align:center}
+.empty{grid-column:1/-1;text-align:center;border:1px dashed #444;border-radius:18px;padding:45px 20px;color:var(--muted)}
+.empty strong{display:block;color:#fff;font-size:20px;margin-bottom:8px}
+.benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:30px 0 60px}
+.benefit,.contact{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px}
+.benefit p,.contact p{font-size:13px;color:var(--muted)}
+.contact{text-align:center;padding:40px 20px;margin-bottom:55px}
+footer{border-top:1px solid var(--line);padding:24px 0;color:#999;font-size:12px;text-align:center}
+.admin{display:none;border-top:1px solid var(--line);padding:35px 0}
+.admin.open{display:block}
+.form{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}
+.form input,.form textarea{width:100%;min-width:0}
+.full{grid-column:1/-1}
+.admin-item{display:flex;justify-content:space-between;align-items:center;gap:10px;border-top:1px solid var(--line);padding:14px 0}
+.admin-item small{display:block;color:#aaa}
+.note{font-size:12px;color:#bbb;background:#222;border-radius:10px;padding:12px;margin:14px 0}
+@media(max-width:700px){.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.product img{height:145px}.product-info{padding:11px}.benefits{grid-template-columns:1fr}.heading{align-items:start;flex-direction:column}.form{grid-template-columns:1fr}h1{letter-spacing:-2px}}
+</style>
+</head>
+<body>
+<header>
+<nav class="wrap">
+<a class="logo" href="#">B<span>tech.</span></a>
+<span class="eyebrow">Apple Specialist</span>
+<a href="#produtos">Ver produtos</a>
+</nav>
+</header>
 
+<main>
+<section class="hero">
+<div class="wrap">
+<div class="eyebrow">Tecnologia • Experiência • Btech</div>
+<h1>Seu próximo iPhone começa aqui.</h1>
+<p>Descubra sua próxima experiência Apple. Consulte nossos aparelhos, condições de pagamento e possibilidades de upgrade.</p>
+<a class="white" style="display:inline-block;padding:13px 23px;border-radius:30px;font-weight:700" href="#produtos">Explorar vitrine</a>
+</div>
+</section>
+
+<section class="section wrap" id="produtos">
+<div class="heading">
+<div><h2>Nossa vitrine</h2><p class="muted">Encontre o aparelho ideal para você.</p></div>
+</div>
+<input class="search" id="search" type="search" placeholder="Buscar produto..." aria-label="Buscar produto">
+<div class="grid" id="catalog"></div>
+<div class="benefits">
+<div class="benefit"><strong>Upgrade</strong><p>Consulte a possibilidade de usar seu aparelho atual na troca.</p></div>
+<div class="benefit"><strong>Condições especiais</strong><p>Consulte as formas de pagamento disponíveis com a equipe.</p></div>
+<div class="benefit"><strong>Atendimento especializado</strong><p>Tire suas dúvidas antes de escolher seu próximo aparelho.</p></div>
+</div>
+</section>
+
+<section class="wrap contact" id="contato">
+<h2>Vamos encontrar seu próximo iPhone?</h2>
+<p>Fale com nossa equipe para consultar os aparelhos disponíveis.</p>
+<button class="white" id="contact">Falar com a Btech</button>
+</section>
+
+<section class="admin" id="admin">
+<div class="wrap">
+<h2>Painel de produtos</h2>
+<p class="muted">Área local de demonstração para cadastrar e editar produtos.</p>
+<div class="note">Atenção: este painel não tem senha e os produtos ficam salvos apenas neste navegador. Não é um painel seguro para administrar o catálogo público. Vamos conectar um painel autenticado com banco de dados em uma próxima etapa.</div>
+<form id="productForm" class="form">
+<input id="name" placeholder="Nome do produto" required>
+<input id="price" type="number" min="0" step="0.01" placeholder="Preço em reais (opcional)">
+<input id="description" class="full" placeholder="Descrição, memória, cor etc.">
+<input id="image" class="full" type="url" placeholder="URL pública da imagem (opcional)">
+<button class="white full" type="submit">Salvar produto</button>
+</form>
+<div id="adminList"></div>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="wrap">
+<strong>Btech | Apple Specialist</strong>
+<p>Consulte disponibilidade, valores e condições com nossa equipe.</p>
+<p>Apple é uma marca de seu respectivo titular. Este site não representa necessariamente um canal oficial da Apple.</p>
+<p>© <span id="year"></span> Btech. Todos os direitos reservados.</p>
+</div>
+</footer>
+
+<script>
+const WHATSAPP = "554132031234";
+const STORAGE_KEY = "btech_demo_products";
+let products = [];
+
+try {
+  products = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
+  if (!Array.isArray(products)) products = [];
+} catch {
+  products = [];
+}
+
+const catalog = document.getElementById("catalog");
+const search = document.getElementById("search");
+const form = document.getElementById("productForm");
+let editingId = null;
+
+document.getElementById("year").textContent = new Date().getFullYear();
+
+function escapeHTML(value) {
+  return String(value ?? "").replace(/[&<>"']/g, c => ({
+    "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
+  })[c]);
+}
+
+function money(value) {
+  return Number(value).toLocaleString("pt-BR", {
+    style:"currency", currency:"BRL"
+  });
+}
+
+function whatsapp(message) {
+  const url = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(message);
+  window.open(url, "_blank", "noopener,noreferrer");
+}
+
+function render() {
+  const query = search.value.trim().toLowerCase();
+  const items = products.filter(p =>
+    (p.name + " " + p.description).toLowerCase().includes(query)
+  );
+
+  if (!items.length) {
+    catalog.innerHTML = `<div class="empty"><strong>${
+      products.length ? "Nenhum produto encontrado" : "Novidades em breve"
+    }</strong><span>${
+      products.length ? "Tente outra busca." :
+      "Nossa vitrine está sendo preparada. Fale com a Btech para consultar os aparelhos disponíveis."
+    }</span></div>`;
+    return;
+  }
+
+  catalog.innerHTML = items.map(p => `
+    <article class="product">
+      ${p.image ? `<img src="${escapeHTML(p.image)}" alt="${escapeHTML(p.name)}" loading="lazy">` : ""}
+      <div class="product-info">
+        <h3>${escapeHTML(p.name)}</h3>
+        <p>${escapeHTML(p.description || "Consulte detalhes com nossa equipe.")}</p>
+        <div class="price">${p.price !== "" && p.price != null ? money(p.price) : "Consulte o valor"}</div>
+        <a class="white" style="padding:11px;border-radius:30px;font-size:13px;font-weight:700" target="_blank" rel="noopener" href="${"https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent("Olá, Btech! Tenho interesse no produto " + p.name + ".")}">Consultar no WhatsApp</a>
+      </div>
+    </article>`).join("");
+}
+
+function saveProducts() {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(products));
+}
+
+function renderAdmin() {
+  const list = document.getElementById("adminList");
+  if (!products.length) {
+    list.innerHTML = '<p class="muted">Nenhum produto cadastrado neste navegador.</p>';
+    return;
+  }
+
+  list.innerHTML = products.map(p => `
+    <div class="admin-item">
+      <div><strong>${escapeHTML(p.name)}</strong><small>${p.price !== "" && p.price != null ? money(p.price) : "Preço sob consulta"}</small></div>
+      <div style="display:flex;gap:7px;flex-wrap:wrap">
+        <button class="dark" data-edit="${p.id}">Editar</button>
+        <button class="dark" data-delete="${p.id}">Excluir</button>
+      </div>
+    </div>`).join("");
+}
+
+form.addEventListener("submit", event => {
+  event.preventDefault();
+  const product = {
+    id: editingId || String(Date.now()),
+    name: document.getElementById("name").value.trim(),
+    price: document.getElementById("price").value,
+    description: document.getElementById("description").value.trim(),
+    image: document.getElementById("image").value.trim()
+  };
+
+  if (!product.name) return;
+
+  if (editingId) {
+    products = products.map(p => p.id === editingId ? product : p);
+  } else {
+    products.push(product);
+  }
+
+  editingId = null;
+  saveProducts();
+  form.reset();
+  form.querySelector("button[type=submit]").textContent = "Salvar produto";
+  render();
+  renderAdmin();
+});
+
+document.getElementById("adminList").addEventListener("click", event => {
+  const edit = event.target.dataset.edit;
+  const del = event.target.dataset.delete;
+
+  if (edit) {
+    const p = products.find(item => item.id === edit);
+    if (!p) return;
+    editingId = p.id;
+    document.getElementById("name").value = p.name;
+    document.getElementById("price").value = p.price ?? "";
+    document.getElementById("description").value = p.description || "";
+    document.getElementById("image").value = p.image || "";
+    form.querySelector("button[type=submit]").textContent = "Atualizar produto";
+    form.scrollIntoView({behavior:"smooth"});
+  }
+
+  if (del && confirm("Deseja excluir este produto deste navegador?")) {
+    products = products.filter(p => p.id !== del);
+    saveProducts();
+    render();
+    renderAdmin();
+  }
+});
+
+search.addEventListener("input", render);
+document.getElementById("contact").addEventListener("click", () => {
+  whatsapp("Olá, Btech! Gostaria de conhecer os produtos disponíveis.");
+});
+
+render();
+renderAdmin();
+
+// Para abrir a demonstração do painel, acrescente #admin ao endereço.
+// Exemplo: https://seu-site.netlify.app/#admin
+if (location.hash === "#admin") {
+  document.getElementById("admin").classList.add("open");
+}
+</script>
+</body>
+</html>
