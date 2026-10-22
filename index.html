@@ -1,1 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080808">
+  <meta name="description" content="Betech Apple Specialist. Conheça nossos iPhones e consulte as condições de compra pelo WhatsApp.">
+  <title>Betech Apple Specialist</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #080808;
+      --panel: #141414;
+      --text: #fff;
+      --muted: #aaa;
+      --line: #303030;
+    }
 
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 18px 7%;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .logo {
+      display: block;
+      width: 190px;
+      max-width: 55%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .top-link {
+      border: 1px solid #666;
+      border-radius: 30px;
+      padding: 11px 16px;
+      font-size: 13px;
+    }
+
+    .hero {
+      padding: 90px 7% 75px;
+      text-align: center;
+      background: radial-gradient(ellipse at top, #242424 0%, #080808 65%);
+    }
+
+    .eyebrow {
+      color: #bbb;
+      font-size: 12px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 850px;
+      margin: 20px auto;
+      font-size: clamp(38px, 7vw, 76px);
+      line-height: 1.05;
+      letter-spacing: -2px;
+    }
+
+    .hero p {
+      max-width: 570px;
+      margin: 0 auto 28px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 15px 24px;
+      border-radius: 30px;
+      background: #fff;
+      color: #080808;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    main { padding: 55px 7%; }
+
+    .section-heading { margin-bottom: 25px; }
+
+    .section-heading h2 {
+      margin: 0 0 10px;
+      font-size: clamp(25px, 4vw, 36px);
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .product {
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--panel);
+    }
+
+    .product-tag {
+      color: #bbb;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .product h3 { font-size: 22px; }
+
+    .product p {
+      min-height: 42px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .product .button {
+      margin-top: 12px;
+      padding: 12px 16px;
+      font-size: 13px;
+    }
+
+    .conditions {
+      margin-top: 45px;
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      text-align: center;
+    }
+
+    .conditions p {
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    footer {
+      padding: 25px 7%;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 12px;
+      text-align: center;
+      line-height: 1.8;
+    }
+
+    @media (max-width: 700px) {
+      header { padding: 15px 5%; }
+      .logo { width: 155px; }
+      .top-link { padding: 10px 12px; font-size: 12px; }
+      .hero { padding: 70px 6% 60px; }
+      main { padding: 42px 5%; }
+      .products { grid-template-columns: 1fr; }
+      .product p { min-height: auto; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="#" aria-label="Página inicial Betech">
+      <img class="logo" src="logo-betech.jpg" alt="Betech Apple Specialist">
+    </a>
+    <a class="top-link" href="https://wa.me/554132031234" target="_blank" rel="noopener">
+      Fale conosco ↗
+    </a>
+  </header>
+
+  <section class="hero">
+    <div class="eyebrow">Betech Apple Specialist</div>
+    <h1>Seu próximo iPhone começa aqui.</h1>
+    <p>
+      Tecnologia, atendimento especializado e condições para encontrar
+      o aparelho ideal para você.
+    </p>
+    <a class="button" href="https://wa.me/554132031234" target="_blank" rel="noopener">
+      Consultar pelo WhatsApp
+    </a>
+  </section>
+
+  <main>
+    <section class="section-heading">
+      <h2>Encontre seu próximo iPhone</h2>
+      <p>Consulte modelos disponíveis, cores, armazenamento e condições com nossa equipe.</p>
+    </section>
+
+    <section class="products" aria-label="Categorias de produtos">
+      <article class="product">
+        <div class="product-tag">Linha atual</div>
+        <h3>iPhone</h3>
+        <p>Consulte os modelos disponíveis e escolha o seu próximo aparelho.</p>
+        <a class="button" href="https://wa.me/554132031234?text=Ol%C3%A1%2C%20quero%20consultar%20os%20iPhones%20dispon%C3%ADveis." target="_blank" rel="noopener">Consultar modelos</a>
+      </article>
+
+      <article class="product">
+        <div class="product-tag">Sua próxima escolha</div>
+        <h3>Modelos Pro</h3>
+        <p>Conheça as opções com recursos avançados de câmera e desempenho.</p>
+        <a class="button" href="https://wa.me/554132031234?text=Ol%C3%A1%2C%20quero%20conhecer%20os%20modelos%20Pro." target="_blank" rel="noopener">Conhecer opções</a>
+      </article>
+
+      <article class="product">
+        <div class="product-tag">Faça seu upgrade</div>
+        <h3>Troque de iPhone</h3>
+        <p>Converse com nossa equipe para consultar opções de upgrade.</p>
+        <a class="button" href="https://wa.me/554132031234?text=Ol%C3%A1%2C%20quero%20consultar%20um%20upgrade%20de%20iPhone." target="_blank" rel="noopener">Consultar upgrade</a>
+      </article>
+    </section>
+
+    <section class="conditions">
+      <h2>Condições para você</h2>
+      <p>
+        Consulte o parcelamento em até 18x, as formas de pagamento,
+        incluindo Senff, e as condições de upgrade diretamente com a equipe.
+        Sujeito à aprovação e às condições da loja.
+      </p>
+      <a class="button" href="https://wa.me/554132031234" target="_blank" rel="noopener">
+        Falar com um especialista
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    Betech Apple Specialist<br>
+    Consulte disponibilidade, preços e condições com nossa equipe.
+  </footer>
+</body>
+</html>
