@@ -1,1 +1,64 @@
+backend:
+  name: github
+  repo: Evertonbetech088/vitrine-betech
+  branch: main
+  auth_type: oauth
+  auth_scope: repo
 
+media_folder: "images/products"
+public_folder: "/images/products"
+
+locale: "pt"
+
+site_url: "https://betechloja.netlify.app"
+
+publish_mode: simple
+
+collections:
+  - name: "produtos"
+    label: "Produtos da Betech"
+    folder: "content/products"
+    create: true
+    slug: "{{slug}}"
+    extension: "yml"
+    format: "yaml"
+    fields:
+      - label: "Modelo"
+        name: "modelo"
+        widget: "string"
+
+      - label: "Preço"
+        name: "preco"
+        widget: "string"
+        required: true
+
+      - label: "Armazenamento"
+        name: "armazenamento"
+        widget: "select"
+        options:
+          - "64 GB"
+          - "128 GB"
+          - "256 GB"
+          - "512 GB"
+          - "1 TB"
+          - "2 TB"
+
+      - label: "Cor"
+        name: "cor"
+        widget: "string"
+        required: false
+
+      - label: "Foto do produto"
+        name: "foto"
+        widget: "image"
+        required: false
+
+      - label: "Descrição"
+        name: "descricao"
+        widget: "text"
+        required: false
+
+      - label: "Disponível"
+        name: "disponivel"
+        widget: "boolean"
+        default: true
